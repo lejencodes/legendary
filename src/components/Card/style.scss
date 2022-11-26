@@ -1,0 +1,26 @@
+@import '@styles/variables';
+
+.Card {
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: $br_lg;
+  box-shadow: $shadow_md;
+  margin: 0 auto;
+}
+
+.Card_title {
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: $fw_normal;
+  font-family: 'Great Vibes', cursive;
+  color: #fff;
+  text-align: center;
+  background-color: $c_pink;
+  border-radius: $br_lg $br_lg 0;
+  padding: 10px;
+  padding-top: 20px;
+}
+
+.Card_content {
+  padding: 20px 20px 30px;
+}

@@ -1,0 +1,32 @@
+@import '@styles/variables';
+
+.InputField {
+  position: relative;
+
+  + .InputField {
+    margin-top: 20px;
+  }
+
+  .InputField {
+    margin-top: 10px;
+    padding-left: 40px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &.-question + &.-question {
+    margin-top: 30px;
+  }
+}
+
+.InputField_required {
+  color: $c_red;
+  font-size: 10px;
+  padding-left: 5px;
+}
+
+.InputField_label {
+  font-size: 12px;
+}

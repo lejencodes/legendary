@@ -1,0 +1,17 @@
+.Map {
+  width: 100%;
+  height: calc(100vw - 80px);
+  max-height: 300px;
+  position: relative;
+  margin-top: 20px;
+
+  iframe {
+    border: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+}

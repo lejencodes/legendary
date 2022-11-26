@@ -1,0 +1,19 @@
+@import '@styles/mixins';
+@import '@styles/keyframes';
+
+.Envelope {
+  display: flex;
+  height: 100%;
+  align-items: center;
+
+  @include wide {
+    margin-top: -80px;
+  }
+}
+
+.Envelope_skip {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  animation: fadeIn 1s 1.5s both;
+}

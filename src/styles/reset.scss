@@ -1,0 +1,48 @@
+html,
+body,
+div,
+span,
+h1,
+h2,
+p,
+a,
+button,
+img,
+dl,
+dt,
+dd,
+ul,
+li,
+form,
+label,
+header,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  color: inherit;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+header,
+nav {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+input,
+textarea {
+  appearance: none;
+}

@@ -1,0 +1,36 @@
+@import '@styles/variables';
+
+.Section {
+  + .Section .Section_title {
+    margin-top: 50px;
+  }
+}
+
+.Section_title {
+  font-size: 17px;
+  color: $c_red;
+  font-weight: $fw_bold;
+  padding: 5px 0;
+  margin-bottom: 10px;
+
+  &.-icon {
+    background: {
+      repeat: no-repeat;
+      position: left center;
+    }
+    padding-left: 30px;
+  }
+
+  $icons: 'grape', 'ribbon', 'bank';
+  @each $icon in $icons {
+    &.-#{$icon} {
+      background-image: url('./assets/icon_#{$icon}.svg');
+
+      @if $icon == 'bank' {
+        background-size: 20px 20px;
+      } @else {
+        background-size: 24px 24px;
+      }
+    }
+  }
+}

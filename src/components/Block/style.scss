@@ -1,0 +1,70 @@
+@import '@styles/variables';
+
+.Block {
+  $sizes: (
+    'xs': 5,
+    'sm': 10,
+    'md': 20,
+    'lg': 30,
+    'xl': 40,
+  );
+  $positions: 'top', 'right', 'bottom', 'left';
+
+  &.-around {
+    @each $sizeName, $sizeValue in $sizes {
+      &.-#{$sizeName} {
+        padding: #{$sizeValue}px;
+      }
+    }
+  }
+
+  &.-vertical {
+    @each $sizeName, $sizeValue in $sizes {
+      &.-#{$sizeName} {
+        padding: #{$sizeValue}px 0;
+      }
+    }
+  }
+
+  &.-horizontal {
+    @each $sizeName, $sizeValue in $sizes {
+      &.-#{$sizeName} {
+        padding: 0 #{$sizeValue}px;
+      }
+    }
+  }
+
+  @each $position in $positions {
+    &.-#{$position} {
+      @each $sizeName, $sizeValue in $sizes {
+        &.-#{$sizeName} {
+          padding-#{$position}: #{$sizeValue}px;
+        }
+      }
+    }
+  }
+
+  &.-color {
+    background-color: rgba($c_pink, 0.1);
+  }
+
+  &.-border {
+    border: 2px solid $c_red;
+  }
+
+  &.-roundCorner {
+    border-radius: $br_sm;
+  }
+
+  &.-center {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  &.-between {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}

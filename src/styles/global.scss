@@ -1,0 +1,97 @@
+@import './variables';
+@import './reset';
+
+html {
+  height: 100%;
+  font-family: 'Open Sans', 'Noto Sans JP', sans-serif;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.75;
+  letter-spacing: $ls_md;
+  color: $c_black;
+  background: url('@assets/images/bg.png') repeat;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+#root {
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+input,
+button,
+textarea {
+  outline: none;
+}
+
+input,
+textarea,
+select {
+  font-size: 16px;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+  opacity: 0;
+  position: absolute;
+}
+
+a,
+button {
+  transition: opacity 0.25s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.page-enter,
+.loader-enter,
+.element-enter {
+  opacity: 0;
+}
+
+.page-enter-active {
+  opacity: 1;
+  transition: opacity $dur_slow;
+}
+
+.element-enter-active {
+  opacity: 1;
+  transition: opacity $dur_fast;
+}
+
+.page-exit,
+.loader-exit,
+.element-exit {
+  opacity: 1;
+}
+
+.page-exit-active {
+  opacity: 0;
+}
+
+.loader-exit-active {
+  opacity: 0;
+  transition: opacity $dur_slow;
+}
+
+.element-exit-active {
+  opacity: 0;
+  transition: opacity $dur_fast;
+}
+
+.loader-exit-done,
+.element-exit-done {
+  display: none;
+}

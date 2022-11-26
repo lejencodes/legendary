@@ -1,0 +1,17 @@
+@import '@styles/variables';
+
+.IndentSection {
+  margin-left: 30px;
+  padding-left: 10px;
+  border-left: 2px solid $c_red;
+
+  + .IndentSection {
+    margin-top: 20px;
+  }
+}
+
+.IndentSection_title {
+  font-weight: $fw_bold;
+  line-height: 1;
+  margin: 10px 0 5px;
+}
